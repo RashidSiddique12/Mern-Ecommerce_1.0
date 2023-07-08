@@ -27,4 +27,6 @@ server.use("*", (req, res) => {
   res.sendFile(path.resolve(__dirname, "build", "index.html"));
 });
 
-server.listen(4000, () => console.log("Server is listing from Port no. 4000"));
+server.listen(process.env.PORT, () =>
+  console.log(`Server is listing from Port no. ${process.env.PORT}`)
+);
